@@ -2,14 +2,16 @@ cmake_minimum_required(VERSION 3.4)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_compile_options(--coverage)
 
 option(BUILD_TESTS "Build tests" OFF)
-
 project (banking)
 
 add_library(banking STATIC ${CMAKE_CURRENT_SOURCE_DIR}/banking/Transaction.cpp ${CMAKE_CURRENT_SOURCE_DIR}/banking/Account.cpp)
 target_include_directories(banking PUBLIC
 ${CMAKE_CURRENT_SOURCE_DIR}/banking )
+
+target_link_libraries(banking gcov)
 
 if(BUILD_TESTS)
   enable_testing()
