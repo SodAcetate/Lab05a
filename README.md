@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/SodAcetate/Lab05a/badge.svg?branch=main)](https://coveralls.io/github/SodAcetate/Lab05a?branch=main)
+
 ## Laboratory work V
 
 Данная лабораторная работа посвещена изучению фреймворков для тестирования на примере **GTest**
